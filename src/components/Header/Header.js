@@ -1,16 +1,16 @@
-// importing corresponding css
+
 import "./Header.css";
 
-// Importing from Bootstrap
+
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
 
-// Header Functional Component
+
 function Header() {
   return (
 
-  /* Navbar Component Starts */
+
 
   <div className="navbar-container">
    <Navbar variant="dark" className="navbar">
@@ -27,7 +27,7 @@ function Header() {
       </Navbar>
     </div>
     
-  /* Navbar Component Ends */  
+
   );
 }
 
