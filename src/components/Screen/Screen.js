@@ -3,7 +3,7 @@ import {CalcContext} from '../../context/CalcContext';
 import { Textfit } from 'react-textfit';
 import './Screen.css';
 
-// Screen Functional Component to Display Results
+
 const Screen = () => {
 
   const {calc } = useContext(CalcContext);
