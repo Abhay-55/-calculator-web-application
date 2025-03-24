@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 
-// Importing CalcContext API
+
 import {CalcContext} from '../../context/CalcContext';
 
-// importing corresponding css
+
 import './Button.css';
 
-// Method to setup className based on the operator for applying css
+
 const getStyleName = btn => {
 
   const className = {
@@ -21,12 +21,12 @@ const getStyleName = btn => {
 }
 
 
-// Button Functional Componnent
+
 const Button = ({ value }) => {
 
   const { calc, setCalc } = useContext(CalcContext);
 
-  // Method gets performed when user clicks decimal btn
+
 const DecimalClick = () => {
 
   setCalc({
@@ -36,12 +36,12 @@ const DecimalClick = () => {
     
 }
 
-// Method to reset the screen with 0
+
 const ResetClick = () => {
   setCalc({sign: '', num: 0, res: 0})
 }
 
-// Method to handle the number clicked by the user
+
 const handleClickButton = () => {
   const numberString = value.toString();
 
@@ -62,7 +62,7 @@ const handleClickButton = () => {
   })
 }
 
-// Method to be performed when user clicks arithmetic operator btn as +  -  * or /
+
 const SignClick = () => {
   setCalc({
     sign: value,
@@ -71,7 +71,7 @@ const SignClick = () => {
   })
 }
 
-// Method to perform arithmetic operation after equals btn is clicked
+
 const EqualsClick = () => {
 
   if(calc.res && calc.num){
@@ -98,7 +98,7 @@ const EqualsClick = () => {
   }
 }
 
-// Method to perform percent operation of operand
+
 const PercentClick = () => {
 
   setCalc({
@@ -110,7 +110,7 @@ const PercentClick = () => {
 
 }
 
-// Method to perform operation or +/- operator i.e to add -/+ as prefix to number
+
 const InvertClick = () => {
   setCalc({
     num: calc.num ? calc.num * -1 : 0,
